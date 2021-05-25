@@ -9,6 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.YaVenALAT">
+        <activity android:name=".speed"></activity>
+        <activity android:name=".AQI" />
+        <activity android:name=".noise" />
+        <activity android:name=".sensor" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
