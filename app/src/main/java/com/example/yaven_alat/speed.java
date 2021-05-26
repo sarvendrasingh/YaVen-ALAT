@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class speed extends AppCompatActivity {
-    private  Button mBack;
+    private  Button mBack, mMap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +23,15 @@ public class speed extends AppCompatActivity {
                 Intent intent = new Intent(speed.this, sensor.class);
                 startActivity(intent);
 
+            }
+        });
+
+        mMap = (Button) findViewById(R.id.locate);
+        mMap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(speed.this, MapsActivity.class);
+                startActivity(intent);
             }
         });
     }

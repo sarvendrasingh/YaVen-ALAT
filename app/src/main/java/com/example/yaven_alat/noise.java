@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 
 public class noise extends AppCompatActivity {
-    private  Button mBack;
+    private  Button mBack, mMap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +23,15 @@ public class noise extends AppCompatActivity {
                 Intent intent = new Intent(noise.this, sensor.class);
                 startActivity(intent);
 
+            }
+        });
+
+        mMap = (Button) findViewById(R.id.locate);
+        mMap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(noise.this, MapsActivity.class);
+                startActivity(intent);
             }
         });
     }
